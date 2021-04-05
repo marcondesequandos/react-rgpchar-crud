@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-rgpchar-crud/static/css/main.67c88f01.chunk.css",
+    "main.js": "/react-rgpchar-crud/static/js/main.cabffc6d.chunk.js",
+    "main.js.map": "/react-rgpchar-crud/static/js/main.cabffc6d.chunk.js.map",
+    "runtime-main.js": "/react-rgpchar-crud/static/js/runtime-main.5e682e6e.js",
+    "runtime-main.js.map": "/react-rgpchar-crud/static/js/runtime-main.5e682e6e.js.map",
+    "static/js/2.42389b49.chunk.js": "/react-rgpchar-crud/static/js/2.42389b49.chunk.js",
+    "static/js/2.42389b49.chunk.js.map": "/react-rgpchar-crud/static/js/2.42389b49.chunk.js.map",
+    "index.html": "/react-rgpchar-crud/index.html",
+    "static/css/main.67c88f01.chunk.css.map": "/react-rgpchar-crud/static/css/main.67c88f01.chunk.css.map",
+    "static/js/2.42389b49.chunk.js.LICENSE.txt": "/react-rgpchar-crud/static/js/2.42389b49.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5e682e6e.js",
+    "static/js/2.42389b49.chunk.js",
+    "static/css/main.67c88f01.chunk.css",
+    "static/js/main.cabffc6d.chunk.js"
+  ]
+}
