@@ -1,8 +1,13 @@
 import React, { Component , useEffect } from 'react';
+import {useSelector} from 'react-redux';
 import {Table} from 'react-bootstrap'
 import "./style.css";
 
 export default function ListarPersonagens(){
+
+        const personagens = useSelector(store => store.reducerPersonagem)
+
+            console.log(personagens)
 
         
         return (
@@ -23,20 +28,22 @@ export default function ListarPersonagens(){
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                                <td>Donavan Camel</td>
-                                <td>Ronin</td>
-                                <td>Neutro</td>
-                                <td>Farmacêutico</td>
-                                <td>Masculino</td>
-                                <td>Humano</td>                              
-                                <td>
-                                    <button className="btn btn-success">Entrada</button>
-                                    <button className="ml-2 btn btn-danger"></button>
-                                </td>
+                        {personagens.map(char => (
+                            <tr>
+                                    <td>{char.id}</td>                                    
+                                    <td>{char.nome}</td>
+                                    <td>{char.arquetipo}</td>
+                                    <td>{char.alinhamento}</td>
+                                    <td>{char.ocupacao}</td>
+                                    <td>{char.genero}</td>
+                                    <td>{char.raca}</td>                              
+                                    <td>
+                                        <button className="btn btn-success">Entrada</button>
+                                        <button className="ml-2 btn btn-danger">Saída</button>
+                                    </td>
 
-                        </tr>
+                            </tr>
+                        ))}
                     
 
                     </tbody>

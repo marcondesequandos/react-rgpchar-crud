@@ -1,0 +1,23 @@
+#containerAddPersonagem
+{
+    padding: 25px;
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-weight: 900;
+}
+
+#formularioCadastro
+{
+    padding: 15px;
+    border: 1px solid #c3c3;
+    border-radius: 10px;
+}
+
+.form-control
+{
+    text-align: center;
+}
