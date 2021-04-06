@@ -36,6 +36,7 @@ export default function reducerPersonagem(state = INICIAL_STATE, action)
         switch(type)
         {
             case "ADD_CHAR":
+                return [...state , payload]
             case "EDIT_CHAR":
             case "REMOVE_CHAR":
             default : 
