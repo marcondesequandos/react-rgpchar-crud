@@ -11,12 +11,6 @@ export const getAllChars = ()=> {
     }
 }
 
-export const getChar = (char)=> {
-    return (dispatch)=> {
-        api.get('/personagens'+char, char)
-        .then((res)=> dispatch(actions.getChar(res.data)))
-    }
-}
 
 export const insertChar = (char)=> {
     return (dispatch)=>{
@@ -24,6 +18,16 @@ export const insertChar = (char)=> {
         .then((res)=> dispatch(actions.add(res.data)))
         .catch(console.log)
     }
+}
+
+export const changeChar = (char)=>
+{
+    return (dispatch) =>
+      {
+        api.put('/personagens/'+char.id , char)
+        .then((res) =>{ dispatch(actions.edit(res.data))})
+        .catch(console.log)                
+      }
 }
 
 

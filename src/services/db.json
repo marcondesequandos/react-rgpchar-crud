@@ -2,21 +2,21 @@
   "personagens": [
     {
       "id": 1,
-      "nome": "Frank Reeves",
-      "arquetipo": "Explorador",
-      "alinhamento": "Caótico e Bom",
-      "ocupacao": "Artista de Rua/Taverna",
-      "genero": "Masculino",
-      "raca": "Humano"
+      "nome": "Frank Reeves (Francis Brown)",
+      "modelo": "undefined",
+      "cor": "undefined",
+      "precoCompra": "undefined",
+      "precoVenda": "undefined",
+      "quantidade": ""
     },
     {
       "id": 2,
-      "nome": "Benedict Pikienko Sprecher",
-      "arquetipo": "Sábio",
-      "alinhamento": "Neutro",
-      "ocupacao": "Artista Circense",
-      "genero": "Masculino",
-      "raca": "Elfo"
+      "nome": "Sprecher",
+      "modelo": "undefined",
+      "cor": "undefined",
+      "precoCompra": "undefined",
+      "precoVenda": "undefined",
+      "quantidade": ""
     },
     {
       "id": 3,
@@ -25,25 +25,8 @@
       "alinhamento": "Leal e Bom",
       "ocupacao": "Soldado",
       "genero": "Masculino",
-      "raca": "Humano"
-    },
-    {
-      "nome": "Donavan Camel",
-      "arquetipo": "Ronin",
-      "alinhamento": "Neutro",
-      "ocupacao": "Farmacêutico",
-      "genero": "Masculino",
       "raca": "Humano",
-      "id": 4
-    },
-    {
-      "nome": "Remos Karameikos",
-      "arquetipo": "Empreendedor Exêntrico",
-      "alinhamento": "Neutro",
-      "ocupacao": "Bilionário",
-      "genero": "Masculino",
-      "raca": "Humano",
-      "id": 5
+      "nível": 1
     }
   ]
 }
