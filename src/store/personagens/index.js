@@ -1,32 +1,4 @@
-const INICIAL_STATE = [
-    {
-        id : 1,
-        nome : "Frank Reeves",
-        arquetipo: "Explorador",
-        alinhamento: "Caótico e Bom",
-        ocupacao: "Artista de Rua/Taverna",
-        genero: "Masculino",
-        raca: "Humano"
-    },
-    {
-        id : 2 ,
-        nome: "Benedict Pikienko Sprecher",
-        arquetipo: "Sábio",
-        alinhamento: "Neutro",
-        ocupacao: "Artista Circense",
-        genero: "Masculino",
-        raca: "Elfo"
-    },
-    {
-        id : 3 ,
-        nome: "Ethan Karthis",
-        arquetipo: "Herói",
-        alinhamento: "Leal e Bom",
-        ocupacao: "Soldado",
-        genero: "Masculino",
-        raca: "Humano"
-    }
-]
+const INICIAL_STATE = []
 
 
 export default function reducerPersonagem(state = INICIAL_STATE, action)
@@ -37,6 +9,10 @@ export default function reducerPersonagem(state = INICIAL_STATE, action)
         {
             case "ADD_CHAR":
                 return [...state , payload]
+            case "GET_ALL_CHARS":                
+                return [...payload]
+            case "GET_CHAR" :
+            case "POST_CHAR" :                
             case "EDIT_CHAR":
             case "REMOVE_CHAR":
             default : 
@@ -52,6 +28,18 @@ export const actions = {
     add : (char)=>({
         payload : char,
         type : "ADD_CHAR"
+    }),
+    postChar : (char)=>({
+        payload : char,
+        type : "POST_CHAR"
+    }),
+    getAllChars : (chars)=>({
+        payload : chars,
+        type : "GET_ALL_CHARS"
+    }),
+    getChar : (char)=>({
+        payload : char,
+        type : "GET_CHAR"
     }),
     remove : (char)=>({
         payload : char,

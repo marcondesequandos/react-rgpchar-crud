@@ -1,10 +1,11 @@
-import {createStore , combineReducers} from 'redux';
-
+import {configureStore} from '@reduxjs/toolkit';
 import reducerPersonagem from './personagens/index'
 
-const reducer = combineReducers({
+
+export default configureStore({
+    reducer: {
     reducerPersonagem
+    }
 })
 
 
-export default createStore(reducer)

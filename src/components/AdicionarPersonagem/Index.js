@@ -1,6 +1,6 @@
 import React , {useState} from 'react';
 import "./style.css";
-import {actions} from '../../store/personagens'
+import {insertChar} from '../../store/FetchActions'
 import { useDispatch } from 'react-redux';
 
 
@@ -9,12 +9,12 @@ export default function AddCharacter() {
 const dispatch = useDispatch()
 
     const [form, setForm] = useState({
-        nome: '',
-        arquetipo: '',
-        alinhamento: '',
-        ocupacao: '',
-        genero: '',
-        raca: '',
+        nome : '',
+        arquetipo : '',
+        alinhamento : '',
+        ocupacao : '',
+        genero : '',
+        raca : '',
     })
 
     function formChange(e)
@@ -27,7 +27,14 @@ const dispatch = useDispatch()
     function onSubmit(e)
     {
         e.preventDefault()
-        dispatch(actions.add(form))
+        dispatch(insertChar(form))
+        resetForm()
+      
+    }
+
+    function resetForm()
+    {
+        window.location.reload(false)
     }
 
 

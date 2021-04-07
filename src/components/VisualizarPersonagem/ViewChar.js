@@ -1,10 +1,9 @@
 import React, { Component , useEffect } from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import { Link } from 'react-router-dom';
 import {Table} from 'react-bootstrap'
-import {getAllChars, deleteChar} from '../../store/FetchActions'
+import {getChar, deleteChar} from '../../store/FetchActions'
 import "./style.css";
-export default function ListarPersonagens(){
+export default function VisualizarPersonagem(){
 
 const dispatch = useDispatch()
 
@@ -12,7 +11,7 @@ const dispatch = useDispatch()
         const personagens = useSelector(store => store.reducerPersonagem)
 
         useEffect(()=>{
-            dispatch(getAllChars())
+            dispatch(getChar())
             } , [dispatch])
 
             
@@ -36,7 +35,7 @@ const dispatch = useDispatch()
                         </tr>
                     </thead>
                     <tbody>
-                        {personagens.map(char => (
+                        {personagens.find(char => (
                             <tr>
                                     <td>{char.id}</td>                                    
                                     <td>{char.nome}</td>
@@ -46,7 +45,7 @@ const dispatch = useDispatch()
                                     <td>{char.genero}</td>
                                     <td>{char.raca}</td>                              
                                     <td>
-                                        <Link className="btn btn-success" to={`/visualizarPersonagem/${char.id}`} >Visualizar</Link>
+                                        <button className="btn btn-success">Entrada</button>
                                         <button className="ml-2 btn btn-danger" onClick={()=> quitChar(char, dispatch)}>Saída</button>
                                     </td>
 

@@ -4,6 +4,7 @@ import {Navbar , Nav , NavDropdown} from 'react-bootstrap';
 import ListarPersonagens from '../ListarPersonagens/ListarPersonagens';
 import AddCharacter from "../AdicionarPersonagem/Index"
 import Home from '../Home/Home'
+import VisualizarPersonagem from '../VisualizarPersonagem/ViewChar'
 
 
 export default class NavBar extends Component {
@@ -28,6 +29,7 @@ export default class NavBar extends Component {
 
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/listarPersonagens" component={ListarPersonagens}/>
+                    <Route exact path="/visualizarPersonagem/:id" component={VisualizarPersonagem}/>
                     <Route exact path="/addCharacter" component={AddCharacter}/>
                     <Route exact path="/saidaProduto"/>
                     <Route exact path="/relatorioDeSaida"/>
