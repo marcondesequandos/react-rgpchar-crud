@@ -1,32 +1,26 @@
 {
   "personagens": [
     {
-      "id": 1,
-      "nome": "Frank Reeves (Francis Brown)",
-      "modelo": "undefined",
-      "cor": "undefined",
-      "precoCompra": "undefined",
-      "precoVenda": "undefined",
-      "quantidade": ""
+      "nome": "Donavan Camel",
+      "arquetipo": "Ronin",
+      "alinhamento": "Neutro",
+      "ocupacao": "Farmacêutico",
+      "genero": "Masculino",
+      "raca": "Humano",
+      "selectedFile": "",
+      "avatar": "https://images.unsplash.com/photo-1617840626851-d385491a9eeb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80",
+      "id": 1
     },
     {
-      "id": 2,
-      "nome": "Sprecher",
-      "modelo": "undefined",
-      "cor": "undefined",
-      "precoCompra": "undefined",
-      "precoVenda": "undefined",
-      "quantidade": ""
-    },
-    {
-      "id": 3,
       "nome": "Ethan Karthis",
-      "arquetipo": "Herói",
+      "arquetipo": "Paladino",
       "alinhamento": "Leal e Bom",
       "ocupacao": "Soldado",
       "genero": "Masculino",
       "raca": "Humano",
-      "nível": 1
+      "selectedFile": "",
+      "avatar": "https://i.pinimg.com/736x/be/6a/92/be6a92d7487cd049ac507bb9132b6f7f.jpg",
+      "id": 2
     }
   ]
 }

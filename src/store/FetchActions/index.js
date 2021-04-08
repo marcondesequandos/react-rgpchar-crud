@@ -10,6 +10,14 @@ export const getAllChars = ()=> {
 
     }
 }
+// export const getChar = (char)=> {
+//     return (dispatch)=>{
+//         api.get('/personagens'+char.id, char)
+//         .then((res)=> dispatch(actions.getChar(res.data)))
+//         .catch(console.log)
+
+//     }
+// }
 
 
 export const insertChar = (char)=> {

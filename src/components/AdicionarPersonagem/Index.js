@@ -15,7 +15,9 @@ const dispatch = useDispatch()
         ocupacao : '',
         genero : '',
         raca : '',
+        selectedFile: '',        
     })
+
 
     function formChange(e)
     {
@@ -45,29 +47,35 @@ const dispatch = useDispatch()
                 <div className="row mt-4">
                     <div className="col-md-4 mt-4">
                         <label>Nome</label>
-                        <input onChange={formChange} name="nome" className="form-control" placeholder="Nome do Personagem"></input>
+                        <input onChange={formChange} value={form.nome} name="nome" className="form-control" placeholder="Nome do Personagem"></input>
                     </div>
                     <div className="col-md-4 mt-4">
                         <label>Arquétipo</label>
-                        <input onChange={formChange} name="arquetipo" className="form-control" placeholder="Arquétipo"></input>
+                        <input onChange={formChange} value={form.arquetipo} name="arquetipo" className="form-control" placeholder="Arquétipo"></input>
                     </div>
                     <div className="col-md-4 mt-4">
                         <label>Alinhamento</label>
-                        <input onChange={formChange} name="alinhamento" className="form-control" placeholder="Alinhamento"></input>
+                        <input onChange={formChange} value={form.alinhamento} name="alinhamento" className="form-control" placeholder="Alinhamento"></input>
                     </div>
                 </div>
                 <div className="row mt-4">
                     <div className="col-md-4 mt-4">
                         <label>Ocupação</label>
-                        <input onChange={formChange} name="ocupacao" className="form-control" placeholder="Ocupação"></input>
+                        <input onChange={formChange} value={form.ocupacao} name="ocupacao" className="form-control" placeholder="Ocupação"></input>
                     </div>
                     <div className="col-md-4 mt-4">
                         <label>Gênero</label>
-                        <input onChange={formChange} name="genero" className="form-control" placeholder="Gênero"></input>
+                        <input onChange={formChange} value={form.genero} name="genero" className="form-control" placeholder="Gênero"></input>
                     </div>
                     <div className="col-md-4 mt-4">
                         <label>Raça</label>
-                        <input onChange={formChange} name="raca" className="form-control" placeholder="Raça"></input>
+                        <input onChange={formChange} value={form.raca} name="raca" className="form-control" placeholder="Raça"></input>
+                    </div>
+                </div>
+                <div className="row mt-4">
+                    <div className="col-md-md-4 mt4">
+                        <label>Avatar</label>
+                        <input onChange={formChange} value={form.avatar} name="avatar" className="form-control" placeholder="URL Avatar"></input> 
                     </div>
 
                 </div>
