@@ -15,7 +15,8 @@ const dispatch = useDispatch()
         ocupacao : '',
         genero : '',
         raca : '',
-        selectedFile: '',        
+        background : '',
+        avatar: '',        
     })
 
 
@@ -50,7 +51,7 @@ const dispatch = useDispatch()
                         <input onChange={formChange} value={form.nome} name="nome" className="form-control" placeholder="Nome do Personagem"></input>
                     </div>
                     <div className="col-md-4 mt-4">
-                        <label>Arquétipo</label>
+                        <label>Arquétipo/Classe</label>
                         <input onChange={formChange} value={form.arquetipo} name="arquetipo" className="form-control" placeholder="Arquétipo"></input>
                     </div>
                     <div className="col-md-4 mt-4">
@@ -73,11 +74,14 @@ const dispatch = useDispatch()
                     </div>
                 </div>
                 <div className="row mt-4">
-                    <div className="col-md-md-4 mt4">
-                        <label>Avatar</label>
-                        <input onChange={formChange} value={form.avatar} name="avatar" className="form-control" placeholder="URL Avatar"></input> 
+                    <div className="col-md-4 mt-4">
+                        <label>Background</label>
+                        <input onChange={formChange} value={form.background} name="background" className="form-control" placeholder="Background"></input>
                     </div>
-
+                    <div className="col-md-4 mt-4">
+                        <label>Avatar</label>
+                        <input onChange={formChange} value={form.avatar} name="avatar" className="form-control" placeholder="URL Avatar"></input>
+                    </div>
                 </div>
                 <div className="row mt-4">
                     <div className="col-md-4"><button type="submit" className="btn btn-success col-md-4 mt-4">Adicionar</button></div>

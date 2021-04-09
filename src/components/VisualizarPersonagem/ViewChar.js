@@ -1,6 +1,8 @@
-import React, { useState , useEffect , useContext, createContext } from 'react'
-import {Table} from 'react-bootstrap'
+import React, { useState , useEffect , useContext } from 'react'
+import { Link } from 'react-router-dom';
+import {Card , ListGroup} from 'react-bootstrap'
 import axios from 'axios'
+import "./style.css";
 
 export default function DataFetching(props) {
 
@@ -27,34 +29,49 @@ export default function DataFetching(props) {
     return (
         <div>            
             <div id="containerLista">
-            <Table striped bordered hover variant="dark">
-                    <thead>
-                        <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Arquétipo</th>
-                        <th>Alinhamento</th>
-                        <th>Ocupação</th>
-                        <th>Gênero</th>
-                        <th>Raça</th>                                                       
-                        <th>Avatar</th>                                                       
-                        </tr>
-                    </thead>
-                    <tbody>                       
-                            <tr key={char.id}>
-                                    <td>{char.id}</td>                                    
-                                    <td>{char.nome}</td>
-                                    <td>{char.arquetipo}</td>
-                                    <td>{char.alinhamento}</td>
-                                    <td>{char.ocupacao}</td>
-                                    <td>{char.genero}</td>
-                                    <td>{char.raca}</td>                            
-                                    <td><img src={char.avatar} width="130"></img></td>                            
-                            </tr>                                           
-                    </tbody>
-                </Table>                
-            </div>          
+            <div id="tituloListagem">
+                    <h4>Visualização de personagem</h4>
+                
+                    
+            </div>
+            <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'}}>
+
+
+                <Card style={{width: '20%', backgroundColor: '#343a40', color: '#fff', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+                
+                        <Card.Body>
+                            <Card.Title><h1>{char.nome}</h1></Card.Title>
+                            <Card.Text>        
+                            </Card.Text>
+                        </Card.Body>
+                        <img src={char.avatar} width="300"></img>
+                        
+                </Card>  
+                <div style={{width: '80%', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'}}>
+                <Card style={{width: '100%', backgroundColor: '#343a40', color: '#fff' }}>                    
+                    
+                    <ListGroup variant="flush">                         
+                        <ListGroup.Item className="charInfo"><strong>Arquétipo/Classe:</strong> {char.arquetipo}</ListGroup.Item>
+                        <ListGroup.Item className="charInfo"><strong>Alinhamento:</strong> {char.alinhamento}</ListGroup.Item>
+                        <ListGroup.Item className="charInfo"><strong>Ocupação:</strong> {char.ocupacao}</ListGroup.Item> 
+                        <ListGroup.Item className="charInfo"><strong>Gênero:</strong> {char.genero}</ListGroup.Item>
+                        <ListGroup.Item className="charInfo"><strong>Raça:</strong> {char.raca}</ListGroup.Item>                        
+                        <ListGroup.Item className="charInfo"><strong>Background:</strong> {char.background}</ListGroup.Item>                        
+                    </ListGroup>
+                </Card>
+
+                </div>
+             
+
+
+            </div>
+            <div style={{marginTop: '5px', position: 'relative', left: '0'}}>
+                    <Link style={{width: '20%'}} className="btn btn-info" to={`/listarPersonagens`}>Voltar Para Lista de Personagens</Link> 
+                </div>  
+            </div>  
+        
         </div>
     )
 }
                                                                                                     
+                                                           

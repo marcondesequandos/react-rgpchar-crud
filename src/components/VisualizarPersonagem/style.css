@@ -23,3 +23,22 @@ tr th {
 tr td {
     text-align: center;
 }
+
+img {
+    border-radius: 25%;
+    margin: 1em;
+}
+
+
+
+
+
+#charName {
+    font-size: 7em;
+}
+
+.charInfo {
+    background-color:#343a40 ;
+    color: #fff;
+}
+

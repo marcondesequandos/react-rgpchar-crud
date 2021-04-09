@@ -34,7 +34,8 @@ export const changeChar = (char)=>
       {
         api.put('/personagens/'+char.id , char)
         .then((res) =>{ dispatch(actions.edit(res.data))})
-        .catch(console.log)                
+        .catch(console.log)
+        window.location.reload(false)                
       }
 }
 
